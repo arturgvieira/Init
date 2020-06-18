@@ -1,0 +1,20 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["esnext", "es2020"],
+    "types": ["node", "graphql"],
+    "typeRoots" : ["./node_modules/@types"],
+    "target": "es2020",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "declaration": true,
+    "pretty": true,
+    "outDir": "../build",
+    
+  },
+  "include": ["index.ts", "api.ts"],
+}
