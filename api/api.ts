@@ -7,12 +7,14 @@ module.exports = class Api {
         hello: String
       }
     `);
-    
-    const root = { hello: () => 'Hello world!' };
-    
-    const result = await graphql(schema, '{ hello }', root).then((response:any) => {
-      return response;
-    });
+
+    const root = { hello: () => 'Hello world! 2' };
+
+    const result = await graphql(schema, '{ hello }', root).then(
+      (response: any) => {
+        return response;
+      }
+    );
     return result;
   };
 };

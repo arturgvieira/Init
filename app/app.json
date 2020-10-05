@@ -19,7 +19,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.cashed.cashed",
+      "package": "com.company.product",
       "versionCode": 1
     }
   }

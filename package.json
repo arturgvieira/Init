@@ -16,6 +16,7 @@
     "apollo-link-http": "^1.5.17",
     "eslint": "^7.2.0",
     "expo": "^37.0.12",
+    "fb-watchman": "^2.0.1",
     "graphql": "^15.1.0",
     "mime": "^2.4.6",
     "nodemon": "^2.0.4",
@@ -64,7 +65,7 @@
     "ts-node": "^8.10.2",
     "ts-node-dev": "^1.0.0-pre.47",
     "tsc": "^1.20150623.0",
-    "typescript": "^3.9.5",
+    "typescript": "^4.0.3",
     "typings": "^2.1.1",
     "webpack": "4.42.0",
     "webpack-cli": "^3.3.11",
@@ -74,12 +75,12 @@
     "extends": "react-app"
   },
   "scripts": {
-    "start": "npm-run-all --serial build --parallel dev ui",
-    "clean": "del -r C:\\Users\\artur\\dev\\cashed.tk\\build",
+    "start": "npm-run-all --serial build --parallel dev ui watch reload",
+    "clean": "del -r C:\\Users\\artur\\desktop\\work\\Init\\build",
     "build": "npm-run-all --serial clean server:build ui:build package:w lint",
     "dev": "npm-run-all --parallel server:watch server:dev",
     "lint": "eslint . --ext .ts --ext .tsx -c .eslintrc.js --fix",
-    "package:w": "C:\\Users\\artur\\dev\\cashed.tk\\package.cmd",
+    "package:w": "C:\\Users\\artur\\desktop\\work\\Init\\package.cmd",
     "package:l": "./package.sh",
     "ui": "cd app && expo start --web --https",
     "ui:build": "cd app && expo build:web",
@@ -87,7 +88,9 @@
     "server": "node build/bundle.js",
     "server:dev": "nodemon build/bundle.js",
     "server:watch": "webpack --config ./api/webpack.config.js -w",
-    "server:build": "webpack --config ./api/webpack.config.js"
+    "server:build": "webpack --config ./api/webpack.config.js",
+    "watch": "watchman watch /api",
+    "reload": "watchman -- trigger /api buildme /app -- 'yarn ui'"
   },
   "prettier": {
     "singleQuote": true
