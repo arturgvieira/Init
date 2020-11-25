@@ -75,9 +75,10 @@
     "extends": "react-app"
   },
   "scripts": {
-    "start": "npm-run-all --serial build --parallel dev ui watch reload",
-    "clean": "del -r C:\\Users\\artur\\desktop\\work\\Init\\build",
-    "build": "npm-run-all --serial clean server:build ui:build package:w lint",
+    "start": "npm-run-all --serial build --parallel dev ui watch",
+    "clean:w": "del -r C:\\Users\\artur\\desktop\\work\\Init\\build",
+    "clean:l": "rm -r ./build",
+    "build": "npm-run-all --serial clean:l server:build ui:build package:l lint",
     "dev": "npm-run-all --parallel server:watch server:dev",
     "lint": "eslint . --ext .ts --ext .tsx -c .eslintrc.js --fix",
     "package:w": "C:\\Users\\artur\\desktop\\work\\Init\\package.cmd",
@@ -89,8 +90,7 @@
     "server:dev": "nodemon build/bundle.js",
     "server:watch": "webpack --config ./api/webpack.config.js -w",
     "server:build": "webpack --config ./api/webpack.config.js",
-    "watch": "watchman watch /api",
-    "reload": "watchman -- trigger /api buildme /app -- 'yarn ui'"
+    "watch": "watchman-make --root ./api -p '*.ts' -r '../update.sh'"
   },
   "prettier": {
     "singleQuote": true

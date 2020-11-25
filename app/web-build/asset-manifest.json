@@ -4,19 +4,19 @@
     "app.js.map": "/static/js/app.c4b2168c.chunk.js.map",
     "runtime~app.js": "/static/js/runtime~app.2e9f1821.js",
     "runtime~app.js.map": "/static/js/runtime~app.2e9f1821.js.map",
-    "static/js/2.4842c5ea.chunk.js": "/static/js/2.4842c5ea.chunk.js",
-    "static/js/2.4842c5ea.chunk.js.map": "/static/js/2.4842c5ea.chunk.js.map",
+    "static/js/2.53310cbd.chunk.js": "/static/js/2.53310cbd.chunk.js",
+    "static/js/2.53310cbd.chunk.js.map": "/static/js/2.53310cbd.chunk.js.map",
     "favicon-16.png": "/favicon-16.png",
     "favicon-32.png": "/favicon-32.png",
     "favicon.ico": "/favicon.ico",
     "index.html": "/index.html",
     "manifest.json": "/manifest.json",
     "serve.json": "/serve.json",
-    "static/js/2.4842c5ea.chunk.js.LICENSE.txt": "/static/js/2.4842c5ea.chunk.js.LICENSE.txt"
+    "static/js/2.53310cbd.chunk.js.LICENSE.txt": "/static/js/2.53310cbd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime~app.2e9f1821.js",
-    "static/js/2.4842c5ea.chunk.js",
+    "static/js/2.53310cbd.chunk.js",
     "static/js/app.c4b2168c.chunk.js"
   ]
 }
